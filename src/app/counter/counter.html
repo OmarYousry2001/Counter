@@ -4,6 +4,13 @@
     <button class="bnt" (click)="increment()">increment</button>
     <button class="bnt" (click)="decrement()">decrement</button>
 
+    <!-- Directives Structural   -->
+    <div [ngSwitch]="getCounterStatus()">
+        <p *ngSwitchCase="'positive'" [ngStyle]="{color:'green'}">The Counter Is Positive </p>
+        <p *ngSwitchCase="'natural'" [ngStyle]="{color:'gray'}">The Counter Is Natural </p>
+        <p *ngSwitchCase="'negative'" [ngStyle]="{color:'red'}">The Counter Is Negative </p>
+
+    </div>
 
 
 
